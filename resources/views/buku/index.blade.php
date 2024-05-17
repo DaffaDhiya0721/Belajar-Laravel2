@@ -15,7 +15,8 @@
                 </div>
                 <div class="card-body">
                     <div class="table-reponsive">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="datatable">
+                            <thead>
                             <tr>
                                 <th>No</th>
                                 <th>Judul Buku</th>
@@ -23,7 +24,9 @@
                                 <th>Cover</th>
                                 <th>Aksi</th>
                             </tr>
-                            @php $no = 1; @endphp
+                        </thead>
+                            <body>
+                                @php $no = 1; @endphp
                             @foreach ($buku as $item)
                             <tr>
                                 <td>{{$no++}}</td>
@@ -51,6 +54,7 @@
                                 </td>
                             </tr>
                             @endforeach
+                            </body>
                         </table>
                     </div>
                 </div>
